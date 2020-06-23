@@ -1,0 +1,16 @@
+
+.input_todo{
+    width: 300px;
+    height: 70px;
+    margin: 0 auto;
+    margin-top: 4rem;
+    border: 2px solid  #282c34;;
+    display: flex;
+  }
+  
+  .put{
+    text-align: center;
+    flex:1;
+    margin: 0 auto;
+    border: none;
+  }
