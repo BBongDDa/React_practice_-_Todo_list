@@ -6,6 +6,8 @@
     margin-top: 4rem;
     border: 2px solid  #282c34;;
     display: flex;
+    position: relative;
+    top : -45px;
   }
   
   .put{
@@ -13,4 +15,9 @@
     flex:1;
     margin: 0 auto;
     border: none;
+  }
+
+  h1{
+    text-align:center;
+    color:#282c34;
   }

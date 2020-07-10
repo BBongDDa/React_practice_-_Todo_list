@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import list from './list';
+import List from './list';
+
 
 const TodoListBlock = styled.div`
   flex: 1;
@@ -10,13 +11,27 @@ const TodoListBlock = styled.div`
   background: gray;
 `;
 
-function TodoList() {
-  return <TodoListBlock>TodoList
-        <>
-        <br/>
-        <list/>
-  </>
-  </TodoListBlock>;
+function TodoList({todo, Delete, onCreate, onCreate2}) {
+  console.log(todo);
+  const plan = todo.map((todolist) => {
+    
+    return ( 
+    
+    
+    <List planName={todolist.user}  key={todolist.id} id={todolist.id} Delete={Delete} onCreate={onCreate} onCreate2={onCreate2}/>
+      )
+    })
+    console.log(plan);
+
+  return (
+    <TodoListBlock>
+    <div style={{fontSize:'1.4rem', backgroundColor:'lightgray'}}>
+      {plan}
+      <hr style={{border:'solid 2px gray', width: '100%;'}}></hr>
+    </div>
+  </TodoListBlock>
+  );
 }
+
 
 export default TodoList;

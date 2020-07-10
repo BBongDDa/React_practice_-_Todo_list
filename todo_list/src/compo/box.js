@@ -2,8 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 
 const TodoTemplateBlock = styled.div`
-  width: 512px;
-  height: 768px;
+  min-width: 350px;
+  width: 37vw;
+  height: 100vh;
 
   position: relative; 
   background: white;
@@ -12,14 +13,27 @@ const TodoTemplateBlock = styled.div`
 
   margin: 0 auto;
 
-  margin-top: 96px;
+  margin-top: 35px;
   margin-bottom: 32px;
   display: flex;
   flex-direction: column;
 `;
 
+const MadeBy = styled.div`
+  position : relative;
+  left : -180px;
+  font-size : 1rem;
+  margin-top: 2rem;
+  .react22{
+    color : aqua;
+  }
+`;
+
 function TodoTemplate({ children }) {
-  return <TodoTemplateBlock>{children}</TodoTemplateBlock>;
+  return(
+     <> <MadeBy>Made by <span className="react22">React</span></MadeBy> 
+     <TodoTemplateBlock>{children}</TodoTemplateBlock> </>
+  )
 }
 
 export default TodoTemplate;
