@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-function List({planName, id, Delete, onCreate2}) {;
+function List({planName, id, Delete}) {;
 
     const onDelete= () => {
         console.log(id);
@@ -9,12 +9,13 @@ function List({planName, id, Delete, onCreate2}) {;
     }
     
     const onEdit = () => {
-        console.log(id+'이것은 에딧안의 아이디');
+        console.log(id+'것은 에딧안의 아이디');
         const Answer = prompt('수정 값을 입력하세요',"")
         console.log(Answer);
         planName = Answer;
-        <List planName/>
+        List({Answer, id, Delete});
     }
+
 
     return (
         <>
